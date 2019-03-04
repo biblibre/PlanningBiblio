@@ -18,7 +18,6 @@
  *   session,
  */
 
-session_start();
 $_SESSION['login_id'] = isset($_SESSION['login_id']) ? $_SESSION['login_id'] : '';
 $_SESSION['login_nom'] = isset($_SESSION['login_nom']) ? $_SESSION['login_nom'] : '';
 $_SESSION['login_prenom'] = isset($_SESSION['login_prenom']) ? $_SESSION['login_prenom'] : '';
@@ -58,7 +57,6 @@ if ($version!=$config['Version']) {
 }
 
 // Initialisation des variables
-$request = Request::createFromGlobals();
 
 $date = $request->get('date');
 $show_menu = $request->get('menu') == 'off' ? false : true;

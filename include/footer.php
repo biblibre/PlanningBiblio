@@ -30,5 +30,4 @@ PlanningBiblio (<?php echo $version; ?>) - Copyright &copy; 2011-2018 - J&eacute
 </html>
 
 <?php
-exit;
 ?>
