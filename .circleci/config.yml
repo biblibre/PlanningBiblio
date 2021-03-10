@@ -51,4 +51,5 @@ jobs:
 
       # run tests with phpunit or codecept
       #- run: ./vendor/bin/phpunit
-      - run: ./vendor/bin/simple-phpunit --bootstrap tests/bootstrap.php tests/
+      - run: sudo cp $PHP_INI_DIR/php.ini-development $PHP_INI_DIR/php.ini && echo 'xdebug.mode=coverage' | sudo tee -a $PHP_INI_DIR/php.ini
+      - run: ./vendor/bin/simple-phpunit --coverage-text --bootstrap tests/bootstrap.php tests/
